@@ -8,8 +8,8 @@
 
   <style>
     header {
-      background-color: rgb(32, 65, 66);
-      color: rgb(241, 124, 229);
+      background-color: beige;
+      color: beige color;
       text-align: center;
       max-width: 900px;
       margin: 0 auto;
@@ -18,11 +18,15 @@
     }
 
     main {
-      background-color: rgb(214, 124, 241);
-      color: rgb(32, 65, 66);
+      background-color: beige;
+      color: black;
       max-width: 900px;
       margin: 0 auto;
       padding: 16px;
+      text-align: center;
+    }
+
+    article{
       display: flex;
     }
 
@@ -32,7 +36,9 @@
       height: 200px;
     }
 
-    
+    .autor {
+      font-weight: bold;
+    }
   </style>
 
 </head>
@@ -44,14 +50,68 @@
   </header>
 
   <main>
-    <img src="Gemini_Generated_Image_f6gsbdf6gsbdf6gs.png" alt="imagem inicial">
-    <div>
-      <P>por: aluna ihalis</p>
-      <p>eu amo</p>
-      <P>meu</p>
-      <P>namorado</p>
-    </div>
+    <article>
+      <img src="Gemini_Generated_Image_f6gsbdf6gsbdf6gs.png" alt="imagem inicial">
+      <div>
+        <P class="autor">por: aluna ihalis</p>
+        <p>eu amo</p>
+        <P>meu</p>
+        <P>namorado.</p>
+        <p>gosto muito dele.</p>
+        <P>ele sempre sera meu sonho.</P>
+        <P class="autor">I love you</P>
+        <button>❤<span>0</span></button>
+      </div>
+    </article>
+
+       <article>
+      <img src="Gemini_Generated_Image_f6gsbdf6gsbdf6gs.png" alt="imagem inicial">
+      <div>
+        <P class="autor">por: aluna ihalis</p>
+        <p>eu amo</p>
+        <P>meu</p>
+        <P>namorado.</p>
+        <p>gosto muito dele.</p>
+        <P>ele sempre sera meu sonho.</P>
+        <P class="autor">I love you</P>
+        <button>❤<span>0</span></button>
+      </div>
+    </article>
+
+       <article>
+      <img src="Gemini_Generated_Image_f6gsbdf6gsbdf6gs.png" alt="imagem inicial">
+      <div>
+        <P class="autor">por: aluna ihalis</p>
+        <p>eu amo</p>
+        <P>meu</p>
+        <P>namorado.</p>
+        <p>gosto muito dele.</p>
+        <P>ele sempre sera meu sonho.</P>
+        <P class="autor">I love you</P>
+        <button>❤<span>0</span></button>
+      </div>
+    </article>
   </main>
 </body>
+<script>
+const botoes = document.querySelectorAll("button");
+
+botoes.forEach(function (botao) {
+let curtiu = false;
+botao.addEventListener("click", botaoClicado);
+function botaoClicado() {
+console.log("fui clicado");
+let texto = botao.querySelector("span");
+if (curtiu === false) {
+texto.textContent++;
+curtiu = true;
+} else {
+texto.textContent--;
+curtiu = false;
+}
+
+}
+})
+</script>
 
 </html>
